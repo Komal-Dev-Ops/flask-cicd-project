@@ -58,3 +58,4 @@ terraform.tfvars
 .aws/
 terraform_1.5.0_linux_amd64.zip
 miniconda.sh
+miniconda.sh
