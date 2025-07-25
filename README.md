@@ -1,6 +1,6 @@
 # Flask CI/CD Pipeline on AWS EC2..
 
-A complete CI/CD pipeline for deploying a Flask web application on AWS EC2 using GitHub Actions, Terraform, Ansible, and Docker.
+A complete CI/CD pipeline for deploying a Flask web application on AWS EC2 using GitHub Actions, Terraform, Ansible, and Docker..
 
 ## 🚀 Architecture
 
