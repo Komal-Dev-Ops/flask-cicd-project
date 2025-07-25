@@ -114,7 +114,7 @@ resource "aws_key_pair" "main" {
 
 # EC2 Instance
 resource "aws_instance" "flask_app" {
-  ami                    = data.aws_ami.ubuntu.id
+  ami                    = "ami-080e1f13689e07408" 
   instance_type          = var.instance_type
   key_name              = aws_key_pair.main.key_name
   vpc_security_group_ids = [aws_security_group.flask_app.id]
@@ -140,17 +140,3 @@ data "aws_availability_zones" "available" {
   state = "available"
 }
 
-data "aws_ami" "ubuntu" {
-  most_recent = true
-  owners      = ["099720109477"] # Canonical
-
-  filter {
-    name   = "name"
-    values = ["ubuntu/images/hvm-ssd/ubuntu-22.04-amd64-server-*"]
-  }
-
-  filter {
-    name   = "virtualization-type"
-    values = ["hvm"]
-  }
-}
